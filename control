@@ -1,0 +1,9 @@
+Package: xys.xxx
+Name: xys
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: xhq
+Author: xhq
+Section: Tweaks

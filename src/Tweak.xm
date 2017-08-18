@@ -1,0 +1,467 @@
+
+
+
+%hook BaseMsgContentViewController
+- (void)AsyncSendMessage:(id)arg1 { %log; %orig; }
+- (void)BeginPlaying:(id)arg1 FromTouch:(BOOL)arg2 { %log; %orig; }
+- (void)CancelRecording { %log; %orig; }
+- (void)EndPlaying:(id)arg1 { %log; %orig; }
+- (id)GetContact { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetCurrentViewController { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetMessageNodeDataArray { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetMessagesWrapArray { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)HasCustomInputToolViewAndDontNeedShowToolView:(char *)arg1 { %log; %orig; }
+- (void)JumpToViewStreamVideo:(id)arg1 { %log; %orig; }
+- (void)MenuControllerWillHide:(id)arg1 { %log; %orig; }
+- (void)MenuControllerWillShow:(id)arg1 { %log; %orig; }
+- (void)MessageReturn:(unsigned long)arg1 MessageInfo:(id)arg2 Event:(unsigned long)arg3 { %log; %orig; }
+- (void)MoreMsgBtnUpdate:(unsigned long)arg1 unReadCount:(unsigned long)arg2 { %log; %orig; }
+- (void)OnAppDataPreview:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)OnEndPlaying:(id)arg1 { %log; %orig; }
+- (void)OnMsgDownloadAppAttachCommonFail:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)OnMsgDownloadAppAttachExpiredFail:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)OnMsgDownloadThumbFail:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)OnMsgDownloadThumbOK:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)OnMsgDownloadVideoCommonFail:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)OnMsgDownloadVideoExpiredFail:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)OnMsgRevoked:(id)arg1 n64MsgId:(long long)arg2 SysMsg:(id)arg3 { %log; %orig; }
+- (void)OnMultiDeleteMessage:(id)arg1 { %log; %orig; }
+- (void)OnMultiEmailMessage:(id)arg1 { %log; %orig; }
+- (void)OnMultiFavAddMessage { %log; %orig; }
+- (void)OnMultiForwardMessage { %log; %orig; }
+- (void)OnMultiMsgMoreOperation:(id)arg1 { %log; %orig; }
+- (void)OnRevokeMsg:(id)arg1 MsgWrap:(id)arg2 ResultCode:(unsigned long)arg3 ResultMsg:(id)arg4 EducationMsg:(id)arg5 { %log; %orig; }
+- (void)OnSendMessageCancel:(id)arg1 { %log; %orig; }
+- (void)OnSendMessageFail:(id)arg1 WithError:(int)arg2 { %log; %orig; }
+- (void)OnSendMessageOK:(id)arg1 { %log; %orig; }
+- (void)PlayShortVideo:(id)arg1 { %log; %orig; }
+- (void)PlayVideo:(id)arg1 soundable:(BOOL)arg2 { %log; %orig; }
+- (void)PreviewAppNode:(id)arg1 MsgWrap:(id)arg2 Pop:(BOOL)arg3 { %log; %orig; }
+- (void)PreviewImage:(id)arg1 { %log; %orig; }
+- (void)PreviewImage:(id)arg1 soundable:(BOOL)arg2 snapshotView:(id)arg3 { %log; %orig; }
+- (id)QueryMsgText:(id)arg1 FromID:(unsigned long)arg2 FromCreateTime:(unsigned long)arg3 Limit:(unsigned long)arg4 LeftCount:(unsigned int *)arg5 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)ReloadView { %log; %orig; }
+- (void)Reset { %log; %orig; }
+- (void)ScrollToBottomAnimated:(BOOL)arg1 { %log; %orig; }
+- (void)ScrollToBottomAnimatedAndLoadMoreNode { %log; %orig; }
+- (void)SendEmojiArtMessageToolView:(id)arg1 { %log; %orig; }
+- (void)SendEmoticonMesssageToolView:(id)arg1 { %log; %orig; }
+- (void)SendTextMessageToolView:(id)arg1 { %log; %orig; }
+- (void)SetMsgPlayed:(id)arg1 { %log; %orig; }
+- (void)SetVoiceEnabled:(BOOL)arg1 { %log; %orig; }
+- (BOOL)ShouldShowKeyboardAnimation { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)ShowEarBackTips { %log; %orig; }
+- (void)ShowEarTips { %log; %orig; }
+- (void)ShowMultiSelectMoreOperation:(id)arg1 { %log; %orig; }
+- (void)ShowVolumeTips { %log; %orig; }
+- (void)StartDownloadShortVideo:(id)arg1 { %log; %orig; }
+- (void)StartDownloadVideo:(id)arg1 { %log; %orig; }
+- (void)StartDownloadVideo:(id)arg1 DownloadMode:(unsigned int)arg2 { %log; %orig; }
+- (void)StartPlayingNodeView:(unsigned long)arg1 { %log; %orig; }
+- (void)StartRecording { %log; %orig; }
+- (void)StartUploadVideo:(id)arg1 { %log; %orig; }
+- (void)StopDownloadVideo:(id)arg1 { %log; %orig; }
+- (void)StopPlayingNodeView:(unsigned long)arg1 { %log; %orig; }
+- (void)StopRecording { %log; %orig; }
+- (void)StopUploadVideo:(id)arg1 { %log; %orig; }
+- (void)TextDidChanged:(id)arg1 selectedRange:(struct _NSRange)arg2 { %log; %orig; }
+- (void)ToolViewPositionDidChanged:(BOOL)arg1 animated:(BOOL)arg2 { %log; %orig; }
+- (BOOL)ToolViewStatusCanSupportAutorotateToInterfaceOrientation:(int)arg1 { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)actionSheet:(id)arg1 clickedButtonAtIndex:(int)arg2 { %log; %orig; }
+- (void)addMessageNode:(id)arg1 layout:(BOOL)arg2 addMoreMsg:(BOOL)arg3 { %log; %orig; }
+- (id)addSplitNode:(id)arg1 addMoreMsg:(BOOL)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)addTimeNode:(id)arg1 layout:(BOOL)arg2 addMoreMsg:(BOOL)arg3 { %log; %orig; }
+- (void)addToContactsFromContactInfo:(id)arg1 { %log; %orig; }
+- (void)adjustDeleteViewRect { %log; %orig; }
+- (void)adjustTableViewOffset { %log; %orig; }
+- (void)adjustTableViewRect { %log; %orig; }
+- (void)adjustViewAndNavBarRect { %log; %orig; }
+- (void)alertView:(id)arg1 clickedButtonAtIndex:(int)arg2 { %log; %orig; }
+- (void)animateHideFirstUnReadButton { %log; %orig; }
+- (void)animateShowFirstUnReadButton { %log; %orig; }
+- (void)beginLockerTimer { %log; %orig; }
+- (BOOL)canBecomeFirstResponder { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)canShowEnterpriseBrandEntry { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)canShowFavEntry { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)canShowLocation { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)canShowSight { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)captureViewParams { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)chatContactForMessageWrap:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)chatUserNameForSightStatistics { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)checkShowRecommandFriendTip:(BOOL)arg1 { %log; %orig; }
+- (void)checkShowSecurityBannerTip:(BOOL)arg1 { %log; %orig; }
+- (void)checkTips:(BOOL)arg1 { %log; %orig; }
+- (void)clearCaptureViewParams { %log; %orig; }
+- (void)clickLinkToDealWithSysXml:(id)arg1 fromScene:(id)arg2 { %log; %orig; }
+- (void)clickLinkToExpose { %log; %orig; }
+- (void)clickNewAASysMsg:(id)arg1 withMsgLocalID:(unsigned long)arg2 { %log; %orig; }
+- (void)clickReceiveBrandMsg { %log; %orig; }
+- (void)clickShieldBrandMsg { %log; %orig; }
+- (void)clickWeAppReceiveSessionMsg { %log; %orig; }
+- (void)contactInfoReturn { %log; %orig; }
+- (id)contactShareMsgFromUser:(id)arg1 toUser:(id)arg2 sharedContact:(id)arg3 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)dealloc { %log; %orig; }
+- (void)deleteAllMessage { %log; %orig; }
+- (void)deleteMail:(id)arg1 { %log; %orig; }
+- (void)deleteNode:(id)arg1 { %log; %orig; }
+- (void)deleteNode:(id)arg1 withDB:(BOOL)arg2 animated:(BOOL)arg3 { %log; %orig; }
+- (void)didExitRoom { %log; %orig; }
+- (void)didFinishedLoading:(id)arg1 { %log; %orig; }
+- (void)didRotateFromInterfaceOrientation:(int)arg1 { %log; %orig; }
+- (void)didSelectSearchResultForMessageWrap:(id)arg1 { %log; %orig; }
+- (void)didSelectSearchResultForMessageWrap:(id)arg1 indexPath:(id)arg2 { %log; %orig; }
+- (void)doJoinExistMultiTalk { %log; %orig; }
+- (id)documentInteractionControllerViewControllerForPreview:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)editStreamVoiceTxtDone { %log; %orig; }
+- (void)editStreamVoiceTxtReturn { %log; %orig; }
+- (void)endSearchAndDisplay { %log; %orig; }
+- (void)filterShowMenuItem:(id)arg1 sender:(id)arg2 { %log; %orig; }
+- (id)findNodeDataByLocalId:(unsigned long)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned int)findNodeIndexByLocalId:(unsigned long)arg1 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (id)findNodeViewByLocalId:(unsigned long)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)fixInputToolViewKeyboard { %log; %orig; }
+- (void)setGesture:(WXGesture *)gesture { %log; %orig; }
+- (WXGesture *)gesture { %log; WXGesture * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (BOOL)gestureRecognizer:(id)arg1 shouldBeRequiredToFailByGestureRecognizer:(id)arg2 { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)gestureRecognizerShouldBegin:(id)arg1 { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)gestureWillBeginTransition:(id)arg1 { %log; %orig; }
+- (void)gestureWillEndTransition:(id)arg1 isCanceld:(BOOL)arg2 { %log; %orig; }
+- (float)getAddFriendTipHeight { %log; float r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (id)getAttachmentViewServiceAppList { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned int)getCurContentSizeHeight { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (id)getCurrentChatName { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (float)getCustomizedAreaWidth { %log; float r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (id)getFirstContentMessageNodeFromArray:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned int)getFirstUnReadMessageIndex { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (unsigned int)getFirstUnReadSplitNodeIndex { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (id)getHomePageBarButton { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (struct CGRect)getInnerVisibleRectInScreen:(struct CGRect)arg1 { %log; struct CGRect r = %orig; return r; }
+- (float)getInvisibleHeight { %log; float r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (id)getLastContentMessageNodeFromArray:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned int)getLastNodePreContentSizeHeight { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (id)getLastSentMsg { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getLeftBarButton { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getMessageChatContactByMessageWrap:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (int)getMessageNodePosition:(id)arg1 { %log; int r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (unsigned int)getMsgContentSizeHeight:(unsigned long)arg1 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (id)getNavigationButton:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (struct CGRect)getNodeRectInScreen:(unsigned long)arg1 { %log; struct CGRect r = %orig; return r; }
+- (id)getParentTableView { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getRightBarButton { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (float)getSearchBarHeight { %log; float r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (float)getSecurityBannerTipHeight { %log; float r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (id)getServiceAppList { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (float)getTableViewVisibleHeightWithOrientation:(int)arg1 { %log; float r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (float)getTipsHeight { %log; float r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (id)getTitleLableViewWithMaxWidth:(float)arg1 title:(id)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getViewController { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (float)getVisibleHeight { %log; float r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (struct CGRect)getVisibleRectInScreen:(id)arg1 { %log; struct CGRect r = %orig; return r; }
+- (id)getVoipBarButton { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)handleAfterDeleteAllMessage { %log; %orig; }
+- (void)handleDeleteAllMessage { %log; %orig; }
+- (BOOL)hasCardPkgEntry { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)hasGroupPayEntry { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)hasRedEnvelopesEntry { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)hasServiceEntry { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)hasTapReaderNodeView { %log; %orig; }
+- (BOOL)hasTransferMoneyEntry { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)headerImageClicked:(id)arg1 { %log; %orig; }
+- (void)headerImageClickedWithMsg:(id)arg1 { %log; %orig; }
+- (void)hideMultiTalkTips { %log; %orig; }
+- (void)hideToolViewAnimated:(BOOL)arg1 { %log; %orig; }
+- (void)hideTrackRoomTips { %log; %orig; }
+- (void)highLightSelectSearchCell { %log; %orig; }
+- (id)indexPathForCellKey:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)init { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)initAllowMultiTalk { %log; %orig; }
+- (void)initAllowNameCardFollowRedEnvelope { %log; %orig; }
+- (void)initAllowRecommendApp { %log; %orig; }
+- (void)initAllowVoiceInput { %log; %orig; }
+- (void)initAllowVoip { %log; %orig; }
+- (void)initAllowWxTalk { %log; %orig; }
+- (void)initAllowWxTalkFollowSight { %log; %orig; }
+- (void)initData { %log; %orig; }
+- (void)initDeepLinkConfig { %log; %orig; }
+- (void)initGestureRecognizer { %log; %orig; }
+- (void)initHistroyMessageNodeData { %log; %orig; }
+- (void)initMsgSearchHelper:(int)arg1 { %log; %orig; }
+- (void)initMultiSelectToolView { %log; %orig; }
+- (void)initNavigationView { %log; %orig; }
+- (void)initSearchBar { %log; %orig; }
+- (void)initTableHeaderView { %log; %orig; }
+- (void)initTableView { %log; %orig; }
+- (void)initToolEmoticonView { %log; %orig; }
+- (void)initToolView { %log; %orig; }
+- (void)initView { %log; %orig; }
+- (BOOL)isAllowVoiceInput { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)isAllowVoip { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)isAllowWxTalk { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)isChatStatusNotifyOpen { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)isContactSizeOverScreen { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)isMsgCanRevoke:(id)arg1 { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)isMsgLastSend:(id)arg1 { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)isPeekPreview { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)isScrollToBottom { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)isShowHeadImage:(id)arg1 { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)isViewControllerAnimated { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)jumpToDetail:(id)arg1 { %log; %orig; }
+- (void)jumpToUserProfile:(id)arg1 Displayname:(id)arg2 Scence:(unsigned long)arg3 { %log; %orig; }
+- (void)jumpToUserProfile:(id)arg1 Displayname:(id)arg2 Scence:(unsigned long)arg3 fromBanner:(BOOL)arg4 { %log; %orig; }
+- (void)keyboardWillHide { %log; %orig; }
+- (void)loadingAfterForwardMessageOK { %log; %orig; }
+- (void)locateTableViewWithLocalID:(unsigned long)arg1 { %log; %orig; }
+- (void)locateToMsg:(id)arg1 { %log; %orig; }
+- (void)lockerTimesup { %log; %orig; }
+- (void)longPressOnHeadImage:(id)arg1 { %log; %orig; }
+- (void)longPressOnHeadImageForDebug:(id)arg1 { %log; %orig; }
+- (void)setM_LockerTimer:(MMTimer *)m_LockerTimer { %log; %orig; }
+- (MMTimer *)m_LockerTimer { %log; MMTimer * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setM_bIsInMainFrame:(BOOL )m_bIsInMainFrame { %log; %orig; }
+- (BOOL )m_bIsInMainFrame { %log; BOOL  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_backgroundThreadDelegate:(__weak id <BaseMsgContentInBackgroundThreadDelgate> )m_backgroundThreadDelegate { %log; %orig; }
+- (__weak id <BaseMsgContentInBackgroundThreadDelgate> )m_backgroundThreadDelegate { %log; __weak id <BaseMsgContentInBackgroundThreadDelgate>  r = %orig; HBLogDebug(@" = 0x%x", (unsigned int)r); return r; }
+- (void)setM_badRoomLogicController:(BadRoomLogicController *)m_badRoomLogicController { %log; %orig; }
+- (BadRoomLogicController *)m_badRoomLogicController { %log; BadRoomLogicController * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setM_delegate:(__weak id <BaseMsgContentDelgate> )m_delegate { %log; %orig; }
+- (__weak id <BaseMsgContentDelgate> )m_delegate { %log; __weak id <BaseMsgContentDelgate>  r = %orig; HBLogDebug(@" = 0x%x", (unsigned int)r); return r; }
+- (void)setM_msgReceivingTipsView:(UIView *)m_msgReceivingTipsView { %log; %orig; }
+- (UIView *)m_msgReceivingTipsView { %log; UIView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setM_searchScene:(int )m_searchScene { %log; %orig; }
+- (int )m_searchScene { %log; int  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_shareContacts:(NSMutableArray *)m_shareContacts { %log; %orig; }
+- (NSMutableArray *)m_shareContacts { %log; NSMutableArray * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)makeCell:(id)arg1 indexPath:(id)arg2 { %log; %orig; }
+- (void)msgSearchBarCancel { %log; %orig; }
+- (void)msgSearchBarDoSearch { %log; %orig; }
+- (void)msgSearchBarSearchByName { %log; %orig; }
+- (void)msgSearchBarSearchByTime { %log; %orig; }
+- (void)newMessageFromContactInfo:(id)arg1 { %log; %orig; }
+- (int)numberOfSectionsInTableView:(id)arg1 { %log; int r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)onBackButtonClicked:(id)arg1 { %log; %orig; }
+- (void)onChatBackgroundChanged:(id)arg1 { %log; %orig; }
+- (void)onClickFavMenu:(id)arg1 { %log; %orig; }
+- (void)onClickFavVideoMenu { %log; %orig; }
+- (void)onClickPlayMusicBtn:(id)arg1 isPlay:(BOOL)arg2 { %log; %orig; }
+- (void)onClickTextFloatPreView:(id)arg1 { %log; %orig; }
+- (void)onClickTranslateMsg:(id)arg1 translateInfo:(id)arg2 { %log; %orig; }
+- (void)onClickVoiceTranslate:(id)arg1 { %log; %orig; }
+- (void)onClosePlayer { %log; %orig; }
+- (void)onClosePlayerForViewDetail:(id)arg1 { %log; %orig; }
+- (void)onCurrentPageMsgReMoved:(id)arg1 { %log; %orig; }
+- (void)onDeleteAllMsg { %log; %orig; }
+- (void)onDeleteMessage:(id)arg1 { %log; %orig; }
+- (void)onEditMessage:(id)arg1 { %log; %orig; }
+- (void)onExposeTemplateMsg:(id)arg1 { %log; %orig; }
+- (void)onFinishMultiSelect:(id)arg1 { %log; %orig; }
+- (void)onForwardMessageOK { %log; %orig; }
+- (void)onFullScreenWindowWillHide { %log; %orig; }
+- (void)onGroupPayButtonClick { %log; %orig; }
+- (void)onHideKeyboard { %log; %orig; }
+- (void)onHideMultiSelectView { %log; %orig; }
+- (void)onIdleTimerUtilVoipQuit { %log; %orig; }
+- (void)onImgMsgLocate:(id)arg1 vc:(id)arg2 { %log; %orig; }
+- (void)onJumpToViewDetail:(id)arg1 { %log; %orig; }
+- (void)onLoadDownMoreMessage:(id)arg1 { %log; %orig; }
+- (void)onLoadFirstScreenMsg:(BOOL)arg1 { %log; %orig; }
+- (void)onLoadFirstUnreadMsg:(id)arg1 { %log; %orig; }
+- (void)onLoadMessageFail { %log; %orig; }
+- (void)onLoadMoreMessage { %log; %orig; }
+- (void)onMassSendSendAgain:(id)arg1 { %log; %orig; }
+- (void)onMoreOperateWithMsgId:(id)arg1 { %log; %orig; }
+- (void)onMsgImgPreviewDataRequired:(id)arg1 { %log; %orig; }
+- (void)onMsgImgWindowDidHideToMsg:(id)arg1 { %log; %orig; }
+- (void)onMsgImgWindowDidShowFromMsg:(id)arg1 { %log; %orig; }
+- (void)onMsgImgWindowWillHideToMsg:(id)arg1 { %log; %orig; }
+- (void)onMsgImgWindowWillShowFromMsg:(id)arg1 { %log; %orig; }
+- (void)onMultiSelectContactReturn:(id)arg1 { %log; %orig; }
+- (void)onMultiTalkButtonClick { %log; %orig; }
+- (void)onOpenMyCardPkgViewController { %log; %orig; }
+- (void)onOpenTrackRoom:(unsigned int)arg1 { %log; %orig; }
+- (void)onPan:(id)arg1 { %log; %orig; }
+- (void)onPerformAction:(id)arg1 { %log; %orig; }
+- (void)onPerformExposeAction:(id)arg1 { %log; %orig; }
+- (void)onPerformIconAction:(id)arg1 { %log; %orig; }
+- (void)onPlayAttachVideo:(id)arg1 vc:(id)arg2 { %log; %orig; }
+- (void)onPositionModeChangeTo:(int)arg1 Animated:(BOOL)arg2 { %log; %orig; }
+- (void)onReceiveSecurityBannerMsg:(id)arg1 withWording:(id)arg2 { %log; %orig; }
+- (void)onReturn:(id)arg1 { %log; %orig; }
+- (void)onSYncEnd { %log; %orig; }
+- (void)onScrollToBottom { %log; %orig; }
+- (void)onScrollToFirstUnReadMsg { %log; %orig; }
+- (void)onSelectLocation { %log; %orig; }
+- (void)onSendTextMsg:(id)arg1 { %log; %orig; }
+- (void)onShareCard { %log; %orig; }
+- (void)onShareVideoToFriend:(id)arg1 { %log; %orig; }
+- (void)onShareVideoToTimeline:(BOOL)arg1 { %log; %orig; }
+- (void)onShortVideoTaken:(id)arg1 thumbImg:(id)arg2 sentImmediately:(BOOL)arg3 isMuted:(BOOL)arg4 { %log; %orig; }
+- (void)onSightPictureTaken:(id)arg1 withFrontCamera:(BOOL)arg2 { %log; %orig; }
+- (void)onSightTipsOK { %log; %orig; }
+- (void)onSightViewDetail:(id)arg1 vc:(id)arg2 { %log; %orig; }
+- (void)onStreamVoiceInputButtonClick { %log; %orig; }
+- (void)onTextDeleteAll { %log; %orig; }
+- (void)onTipViewClick:(id)arg1 { %log; %orig; }
+- (void)onTipsViewClick:(id)arg1 { %log; %orig; }
+- (void)onTipsViewClose:(id)arg1 { %log; %orig; }
+- (void)onToolViewDidMoveToWindow { %log; %orig; }
+- (void)onTopBarFrameChanged { %log; %orig; }
+- (void)onTouchDown { %log; %orig; }
+- (void)onTrackRoomTipsViewClick { %log; %orig; }
+- (void)onTrySHowFirstUnReadButton { %log; %orig; }
+- (void)onVideoVoipInvite { %log; %orig; }
+- (void)onVideoVoipViewDidAppear:(id)arg1 { %log; %orig; }
+- (void)onViewDisappear { %log; %orig; }
+- (void)onVoipInvite { %log; %orig; }
+- (void)openCameraController { %log; %orig; }
+- (void)openChatInfo:(id)arg1 { %log; %orig; }
+- (void)openHomePage:(id)arg1 { %log; %orig; }
+- (void)openMediaBrowser { %log; %orig; }
+- (void)openMyFavoritesListController { %log; %orig; }
+- (void)openServiceApp:(id)arg1 { %log; %orig; }
+- (void)openServiceAppListController { %log; %orig; }
+- (void)openVideoCall { %log; %orig; }
+- (void)openVoiceCall { %log; %orig; }
+- (void)pasteImage:(id)arg1 { %log; %orig; }
+- (int)preferredInterfaceOrientationForPresentation { %log; int r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)previewActionItems { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)previewingContext:(id)arg1 commitViewController:(id)arg2 { %log; %orig; }
+- (id)previewingContext:(id)arg1 viewControllerForLocation:(struct CGPoint)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)readerViewClickedWithMsg:(id)arg1 { %log; %orig; }
+- (void)redEnvelopesLogic { %log; %orig; }
+- (void)reloadBackgroundView { %log; %orig; }
+- (void)reloadMessagesInternal { %log; %orig; }
+- (void)reloadNodeWithMessageWrap:(id)arg1 { %log; %orig; }
+- (void)reloadTableHeaderView:(BOOL)arg1 { %log; %orig; }
+- (void)removeAllObjectsFromMessageNodeDatas { %log; %orig; }
+- (void)removeObjectsFromMessageNodeDatas:(id)arg1 { %log; %orig; }
+- (void)removeVoiceTip { %log; %orig; }
+- (void)removeVoipAndPhoneTip { %log; %orig; }
+- (void)resetMsgSearchHelper { %log; %orig; }
+- (void)resetToolView { %log; %orig; }
+- (void)revokeMsgByNodeView:(id)arg1 { %log; %orig; }
+- (void)rotate:(int)arg1 duration:(double)arg2 { %log; %orig; }
+- (void)scrollActionSheet:(id)arg1 didSelecteItem:(id)arg2 { %log; %orig; }
+- (void)scrollTableToBottomAnimated:(BOOL)arg1 init:(BOOL)arg2 { %log; %orig; }
+- (void)scrollToFirstUnReadMessage:(id)arg1 { %log; %orig; }
+- (void)scrollViewDidEndDecelerating:(id)arg1 { %log; %orig; }
+- (void)scrollViewDidEndScrollingAnimation:(id)arg1 { %log; %orig; }
+- (void)scrollViewDidScroll:(id)arg1 { %log; %orig; }
+- (void)scrollViewWillBeginDragging:(id)arg1 { %log; %orig; }
+- (void)scrollViewWillEndDragging:(id)arg1 withVelocity:(struct CGPoint)arg2 targetContentOffset:(inout struct CGPoint *)arg3 { %log; %orig; }
+- (void)sendCaptruedImage:(id)arg1 { %log; %orig; }
+- (void)sendShortVideoMsg:(id)arg1 thumbImg:(id)arg2 statInfo:(id)arg3 { %log; %orig; }
+- (void)sendShortVideoMsgWithAsset:(id)arg1 { %log; %orig; }
+- (void)setAddFriendTipShow:(BOOL)arg1 contact:(id)arg2 { %log; %orig; }
+- (void)setIsPeekPreview:(BOOL)arg1 { %log; %orig; }
+- (void)setSecurityTipShow:(BOOL)arg1 { %log; %orig; }
+- (void)setTableFooterView:(BOOL)arg1 { %log; %orig; }
+- (void)setToolView:(MMInputToolView *)toolView { %log; %orig; }
+- (MMInputToolView *)toolView { %log; MMInputToolView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)shareMsgToOpenSDKByNodeView:(id)arg1 { %log; %orig; }
+- (BOOL)shouldEnableKeyboardInteractivePop { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)shouldHideOrginInputToolView { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)shouldHideToolViewOnKeyboardHide { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)shouldInitWXEmoticonView { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)shouldInteractivePop { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)shouldShowOpenTrackRoom { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)showAddFriendTip:(BOOL)arg1 { %log; %orig; }
+- (void)showAlertTooMany { %log; %orig; }
+- (void)showAlertWithTitle:(id)arg1 { %log; %orig; }
+- (void)showAttachmentView { %log; %orig; }
+- (void)showEarModeTips { %log; %orig; }
+- (void)showExposeViewController { %log; %orig; }
+- (void)showLoadingView { %log; %orig; }
+- (void)showLoadingViewWithText:(id)arg1 { %log; %orig; }
+- (void)showMultiTalkTips { %log; %orig; }
+- (void)showPlayVoiceTipsIfNeed { %log; %orig; }
+- (void)showReceiveMsgTips { %log; %orig; }
+- (void)showSightDraftBoxView { %log; %orig; }
+- (BOOL)showTrackExitAlert { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)showTrackRoomTips { %log; %orig; }
+- (void)startReceiveMsgWithTips:(id)arg1 { %log; %orig; }
+- (void)startVoiceAnimatingAtNodeId:(unsigned long)arg1 { %log; %orig; }
+- (void)statEnterMsgChat { %log; %orig; }
+- (BOOL)stopAtLastVideoFrameWhenPlayEnd { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)stopLoading { %log; %orig; }
+- (void)stopLoadingAndAndShowErrorWithText:(id)arg1 { %log; %orig; }
+- (void)stopLoadingAndShowOkWithText:(id)arg1 { %log; %orig; }
+- (void)stopLockerTimesup { %log; %orig; }
+- (void)stopReceiveMsg { %log; %orig; }
+- (void)streamVoiceInputBoardDidHide { %log; %orig; }
+- (void)streamVoiceInputBoardDidShow { %log; %orig; }
+- (void)streamVoiceInputBoardWillHide { %log; %orig; }
+- (void)streamVoiceInputFullScreenEnter { %log; %orig; }
+- (void)streamVoiceInputFullScreenExit { %log; %orig; }
+- (void)switchEarMode { %log; %orig; }
+- (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)tableView:(id)arg1 didEndDisplayingCell:(id)arg2 forRowAtIndexPath:(id)arg3 { %log; %orig; }
+- (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2 { %log; %orig; }
+- (int)tableView:(id)arg1 editingStyleForRowAtIndexPath:(id)arg2 { %log; int r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (float)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2 { %log; float r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (int)tableView:(id)arg1 numberOfRowsInSection:(int)arg2 { %log; int r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (BOOL)tableView:(id)arg1 shouldHighlightRowAtIndexPath:(id)arg2 { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3 { %log; %orig; }
+- (id)tagForActivePage { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)tagForCurrentPage { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)tagLink:(id)arg1 messageWrap:(id)arg2 { %log; %orig; }
+- (void)tapAppNodeView:(id)arg1 { %log; %orig; }
+- (void)tapFriendCard_NodeView:(id)arg1 WithContact:(id)arg2 WithMsg:(id)arg3 { %log; %orig; }
+- (void)tapImage_NodeView:(id)arg1 { %log; %orig; }
+- (void)tapLocation_NodeView:(id)arg1 { %log; %orig; }
+- (void)tapPushMail_NodeView:(id)arg1 withPushMailWrap:(id)arg2 { %log; %orig; }
+- (void)tapStatus_NodeView:(id)arg1 { %log; %orig; }
+- (void)tapVideoStatus_NodeView:(id)arg1 { %log; %orig; }
+- (void)tapVideoStatus_NodeView:(id)arg1 DownloadMode:(unsigned int)arg2 { %log; %orig; }
+- (void)tapWeAppImage_NodeView:(id)arg1 { %log; %orig; }
+- (void)touchesBegan_TableView:(id)arg1 withEvent:(id)arg2 { %log; %orig; }
+- (void)touchesEnded_TableView:(id)arg1 withEvent:(id)arg2 { %log; %orig; }
+- (void)traitCollectionDidChange:(id)arg1 { %log; %orig; }
+- (void)transferMoneyLogic { %log; %orig; }
+- (void)tryAddUnReadSplitNode { %log; %orig; }
+- (void)tryMoveToMainFrame { %log; %orig; }
+- (void)tryScrollToBottomAnimated:(BOOL)arg1 { %log; %orig; }
+- (void)trySetInputToolviewFirstResponder { %log; %orig; }
+- (void)tryShowFirstUnReadButtonAnimated { %log; %orig; }
+- (void)unHighLightSelectSearchCell { %log; %orig; }
+- (void)updateBanner { %log; %orig; }
+- (void)updateChatRoomData:(id)arg1 { %log; %orig; }
+- (void)updateDeleteCount { %log; %orig; }
+- (void)updateFirstUnReadButtonOnShowBanner:(float)arg1 { %log; %orig; }
+- (void)updateMessageNodeStatus:(id)arg1 { %log; %orig; }
+- (void)updateOpBtnState:(BOOL)arg1 { %log; %orig; }
+- (void)updateRightBar { %log; %orig; }
+- (void)updateTableContentOffsetAnimated:(BOOL)arg1 OffsetDelta:(float)arg2 { %log; %orig; }
+- (void)updateTableLayoutAnimateDuration:(double)arg1 Orientation:(int)arg2 { %log; %orig; }
+- (void)updateTitleView:(id)arg1 { %log; %orig; }
+- (void)updateToolViewOrigin { %log; %orig; }
+- (void)updateTypingTitle:(id)arg1 { %log; %orig; }
+- (void)viewDidAppear:(BOOL)arg1 { %log; %orig; }
+- (void)viewDidBeDismissed:(BOOL)arg1 { %log; %orig; }
+- (void)viewDidBePoped:(BOOL)arg1 { %log; %orig; }
+- (void)viewDidBePresented:(BOOL)arg1 { %log; %orig; }
+- (void)viewDidBePushed:(BOOL)arg1 { %log; %orig; }
+- (void)viewDidDisappear:(BOOL)arg1 { %log; %orig; }
+- (void)viewDidLayoutSubviews { %log; %orig; }
+- (void)viewDidLoad { %log; %orig; }
+- (void)viewDidPop:(BOOL)arg1 { %log; %orig; }
+- (void)viewDidPush:(BOOL)arg1 { %log; %orig; }
+- (void)viewDidTransitionToNewSize { %log; %orig; }
+- (void)viewWillAppear:(BOOL)arg1 { %log; %orig; }
+- (void)viewWillBePoped:(BOOL)arg1 { %log; %orig; }
+- (void)viewWillBePushed:(BOOL)arg1 { %log; %orig; }
+- (void)viewWillDisappear:(BOOL)arg1 { %log; %orig; }
+- (void)viewWillPop:(BOOL)arg1 { %log; %orig; }
+- (void)viewWillPresent:(BOOL)arg1 { %log; %orig; }
+- (void)viewWillPush:(BOOL)arg1 { %log; %orig; }
+- (void)willAnimateRotationToInterfaceOrientation:(int)arg1 duration:(double)arg2 { %log; %orig; }
+- (void)willAppear { %log; %orig; }
+- (void)willDismissAndShow { %log; %orig; }
+- (void)willDisshow { %log; %orig; }
+- (void)willEnterRoom { %log; %orig; }
+- (void)willShow { %log; %orig; }
+- (void)willShowMenuController:(id)arg1 { %log; %orig; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned int )hash { %log; unsigned int  r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end
